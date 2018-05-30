@@ -1,5 +1,5 @@
 <?php
-$db_name = 'derekluan';
+$db_name = 'pecommerce';
 $hostname = 'localhost';
 $username = 'root';
 $password = 'mysql';
