@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
--- http://www.phpmyadmin.net
+-- version 4.4.15.9
+-- https://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 30-Maio-2018 às 00:14
--- Versão do servidor: 5.6.21
--- PHP Version: 5.6.3
+-- Host: localhost
+-- Generation Time: 30-Maio-2018 às 18:53
+-- Versão do servidor: 5.6.37
+-- PHP Version: 7.1.8
 
 SET time_zone = "+00:00";
 
@@ -13,13 +13,13 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `projeto`
+-- Database: `pecommerce`
 --
-CREATE DATABASE IF NOT EXISTS `derekluan` DEFAULT CHARACTER SET utf32 COLLATE utf32_general_ci;
-USE derekluan;
+CREATE DATABASE IF NOT EXISTS `pecommerce` DEFAULT CHARACTER SET utf32 COLLATE utf32_general_ci;
+USE pecommerce;
 
 -- --------------------------------------------------------
 
@@ -29,7 +29,7 @@ USE derekluan;
 
 DROP TABLE IF EXISTS `pedidos`;
 CREATE TABLE IF NOT EXISTS "pedidos" (
-"id" int(11) NOT NULL,
+  "id" int(11) NOT NULL,
   "id_cliente" int(11) NOT NULL,
   "nome_cliente" varchar(255) NOT NULL,
   "id_produtos" text CHARACTER SET utf8 NOT NULL,
@@ -61,7 +61,7 @@ INSERT INTO `pedidos` (`id`, `id_cliente`, `nome_cliente`, `id_produtos`, `nome_
 
 DROP TABLE IF EXISTS `produtos`;
 CREATE TABLE IF NOT EXISTS "produtos" (
-"id" int(11) NOT NULL,
+  "id" int(11) NOT NULL,
   "nome" varchar(255) NOT NULL,
   "marca" varchar(255) NOT NULL,
   "descricao" varchar(255) NOT NULL,
@@ -106,7 +106,7 @@ INSERT INTO `produtos` (`id`, `nome`, `marca`, `descricao`, `categoria`, `preco`
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS "usuarios" (
-"id" int(11) NOT NULL,
+  "id" int(11) NOT NULL,
   "nome" varchar(255) NOT NULL,
   "login" varchar(255) NOT NULL,
   "senha" varchar(255) NOT NULL,
@@ -129,7 +129,8 @@ INSERT INTO `usuarios` (`id`, `nome`, `login`, `senha`, `email`, `cpf`, `enderec
 (1, 'vendedor', 'vendedor', 'YWRtaW4=', 'vendedor@gmail.com', '2147483647', 'rua 12', 'casa 1', 11111111, 'borel', 'rio de janeiro', 'RJ', 'vendedor'),
 (2, 'Derek', 'derek', 'MTIz', 'derek@gmail.com', '2147483647', 'Rua 123', '204', 1231231, 'Barra', 'Rio de Janeiro', 'RJ', 'usuario'),
 (3, 'juca', 'juca', 'MTIz', 'juca@gmail.com', '12312312311', 'rua do juca', '215', 11111111, 'juca da tijuca', 'rio de juqueiro', 'rj', 'usuario'),
-(4, 'edu', 'educu', 'MTIz', 'edu@cu.com', '12312432141', 'asdfkjashbd', 'kasjbdnsaj', 12312312, 'adskjfnasjdn', 'kjsbndkjansd', 'as', 'usuario');
+(4, 'edu', 'educu', 'MTIz', 'edu@cu.com', '12312432141', 'asdfkjashbd', 'kasjbdnsaj', 12312312, 'adskjfnasjdn', 'kjsbndkjansd', 'as', 'usuario'),
+(5, 'Luan', 'luans', 'MjU4', 'luan@2s.com', '89494916513', 'rua 5', 'ap 1', 62898468, 'cdd', 'rj', 'rj', 'usuario');
 
 --
 -- Indexes for dumped tables
@@ -139,19 +140,19 @@ INSERT INTO `usuarios` (`id`, `nome`, `login`, `senha`, `email`, `cpf`, `enderec
 -- Indexes for table `pedidos`
 --
 ALTER TABLE `pedidos`
- ADD PRIMARY KEY ("id");
+  ADD PRIMARY KEY ("id");
 
 --
 -- Indexes for table `produtos`
 --
 ALTER TABLE `produtos`
- ADD PRIMARY KEY ("id");
+  ADD PRIMARY KEY ("id");
 
 --
 -- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
- ADD PRIMARY KEY ("id");
+  ADD PRIMARY KEY ("id");
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -161,17 +162,17 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `pedidos`
 --
 ALTER TABLE `pedidos`
-MODIFY "id" int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY "id" int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `produtos`
 --
 ALTER TABLE `produtos`
-MODIFY "id" int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY "id" int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-MODIFY "id" int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY "id" int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
