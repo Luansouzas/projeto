@@ -33,7 +33,7 @@
 		<h3 class="col text-center text-light mt-3">Produtos com Desconto</h3>
 		</div>
 		</div>
-
+        <div class="col">
 		<div id="carouselExampleIndicators" class="carousel slide mt-2 mb-2" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -55,6 +55,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only font-dark">Next</span>
             </a>
+        </div>
         </div>
 
 		<div class="row bg-light justify-content-center">

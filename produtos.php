@@ -37,7 +37,7 @@ if ($result = $stmt->fetchAll()){
   	?>
 
 		<div class="row bg-light justify-content-center">
-		<div class="bg-primary col-sm-4 col-5 rounded ">
+		<div class="bg-primary col-7 col-sm-7 col-md-4 rounded ">
 		<h3 class="col text-center text-light mt-3"><?php echo $categoria; ?></h3>
 		</div>
 		</div>
@@ -46,7 +46,7 @@ if ($result = $stmt->fetchAll()){
 <?php
 foreach ($result as $alvos) {
   	?>
-		<figure class="figure col-4 border">
+		<figure class="figure col border">
 			<a href="item.php?nome=<?php echo $alvos['nome']?>"><img class="img-fluid img2" src="<?php echo "img/".$alvos['imagem'];?>"></a>
             <a class="text-dark"href="item.php?nome=<?php echo $alvos['nome']?>"><figcaption class="col mt-2 p-0 text-center"><h4><u><?php echo $alvos['nome']?></u></h4></figcaption></a>
             <h5><?php echo "Preço: R$ ".$alvos['preco'];  ?></h5>
