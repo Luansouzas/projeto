@@ -1,8 +1,8 @@
 <?php
 $db_name = 'pecommerce';
-$hostname = 'localhost';
-$username = 'root';
-$password = 'mysql';
+$hostname = 'mysql427.umbler.com';
+$username = 'pecommerce';
+$password = 'luansouza';
 $opcoes = array(
 	PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES UTF8'
 );
