@@ -70,7 +70,9 @@ if ($result = $stmt->fetchAll()){ ?>
                 <tr>
                 <td class="text-center align-middle pt-4 pb-5">Status:</td>
                 <td class="text-center align-middle pt-4 pb-5 <?php if ($item['status']=="Em processamento"or$item['status']=="Pagamento aprovado"or$item['status']=="Nota emitida"or$item['status']=="Pedido enviado") { echo "font-weight-bold text-success"; }else{echo"font-weight-bold text-success";}?>">Em Processamento  <i class="fas fa-spinner"></i></td>
+
                 <td class="text-center align-middle pt-4 pb-5 <?php if ($item['status']=="Pagamento aprovado"or$item['status']=="Nota emitida"or$item['status']=="Pedido enviado") { echo "font-weight-bold text-success"; }else{echo"font-weight-light";}?>">Pagamento Aprovado  <i class="far fa-money-bill-alt"></i></td>
+                
                 <td class="text-center align-middle pt-4 pb-5 <?php if ($item['status']=="Nota emitida"or$item['status']=="Pedido enviado") { echo "font-weight-bold text-success"; }else{echo"font-weight-light";}?>">Nota Emitida  <i class="far fa-sticky-note"></i></td>
                 <td class="text-center align-middle pt-4 pb-5 <?php if ($item['status']=="Pedido enviado") { echo "font-weight-bold text-success"; }else{echo" font-weight-light";}?>">Pedido Enviado  <i class="fas fa-truck-moving"></i></td>
                 </tr>

@@ -17,61 +17,40 @@
         .img2{
             max-width: 300px;
         }
+        .imgcar{
+            max-width: 270px;
+        }
 	</style>
 </head>
 <body class="bg-light">
 	<div class="container-fluid">
   	 
   	<?php
-  	include "header.php";
-    ?>
-
-
+      include "header.php";
+      ?>
 
 		<div class="row bg-light justify-content-center">
 		<div class="bg-primary col-sm-4 col-10 rounded ">
 		<h3 class="col text-center text-light mt-3">Produtos com Desconto</h3>
 		</div>
 		</div>
-        <div class="col">
-		<div id="carouselExampleIndicators" class="carousel slide mt-2 mb-2" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="img/banner1.jpg" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="img/banner2.jpg" alt="Second slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only font-dark">Next</span>
-            </a>
-        </div>
-        </div>
+      
+      <?php
+      include "carrosel.php";
+      ?>
 
 		<div class="row bg-light justify-content-center">
 		<div class="bg-primary col-sm-4 col-10 rounded ">
 		<h3 class="col text-center text-light mt-3">Mais Vendidos</h3>
 		</div>
 		</div>
-
-
-<?php
-include "conexao.php";
-$stmt = $pdo->prepare('SELECT * FROM produtos order by id desc limit 6');
-$stmt->execute();
-if ($alvos = $stmt->fetchAll()){
-        
-?>
+        <?php
+      include "conexao.php";
+      $stmt = $pdo->prepare('SELECT * FROM produtos order by id desc limit 6');
+      $stmt->execute();
+      if ($alvos = $stmt->fetchAll()){
+              
+      ?>
 	<div class="row bg-light pt-4 text-center">
 		<figure class="figure col border">
 			<a href="item.php?nome=<?php echo $alvos[0]['nome']?>"><img class="img-fluid img2" src="<?php echo "img/".$alvos[0]['imagem'];?>"></a>
