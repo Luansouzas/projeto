@@ -37,7 +37,7 @@ if ($result = $stmt->fetchAll()){
   	?>
 
 		<div class="row bg-light justify-content-center">
-		<div class="bg-primary col-7 col-sm-7 col-md-4 rounded ">
+		<div class="bg-primary col-11 col-sm-7 col-md-4 rounded ">
 		<h3 class="col text-center text-light mt-3"><?php echo $categoria; ?></h3>
 		</div>
 		</div>
