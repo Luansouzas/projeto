@@ -51,8 +51,8 @@ if ($result = $stmt->fetchAll())  {
 <?php
 foreach ($result as $alvos) {
   	?>
-		<figure class="figure col-4 border">
-			<a href="item.php?nome=<?php echo $alvos['nome']?>"><img class="img-fluid img2" src="<?php echo "img/".$alvos['imagem'];?>"></a>
+		<figure class="figure col-10 col-sm-6 col-md-6 col-lg-4 justify-content-center">
+			<a href="item.php?nome=<?php echo $alvos['nome']?>"><img class="img-fluid img2 col" src="<?php echo "img/".$alvos['imagem'];?>"></a>
             <a class="text-dark"href="item.php?nome=<?php echo $alvos['nome']?>"><figcaption class="col mt-2 p-0 text-center"><h4><u><?php echo $alvos['nome']?></u></h4></figcaption></a>
             <h5><?php echo "Preço: R$ ".$alvos['preco'];  ?></h5>
             <p class="col text-primary mt-2"><?php echo $alvos['descricao'];?></p>
