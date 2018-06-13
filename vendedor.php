@@ -35,13 +35,13 @@ if ($_SESSION['tipo']=="vendedor"){
 			<h3>Menu do Vendedor. <br><br> Selecione uma página:</h3>
 			<div class="row justify-content-center mt-5 mx-auto">
 				
-				<div class="col-1">
+				<div class="">
 					<a class="btn btn-primary mb-3" href="cadastrovend.php">Cadastros</a>
 				</div>
-				<div class="col-1">
+				<div class="ml-2">
 					<a class="btn btn-primary mb-3" href="produtosvend.php">Produtos</a>
 				</div>
-				<div class="col-1">
+				<div class="ml-2">
 					<a class="btn btn-primary mb-3" href="pedidosvend.php">Pedidos</a>
 				</div>
 			</div>
